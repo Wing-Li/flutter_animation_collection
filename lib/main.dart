@@ -57,12 +57,12 @@ class _MyHomePageState extends State<MyHomePage> {
       children: [
         SizedBox(height: 16),
         GestureDetector(
-          child: _item("随机渐变出现"),
-          onTap: () => MyUtils.startPageGradient(context, AppearsRandomlyPage()),
-        ),
-        GestureDetector(
           child: _item("弹幕"),
           onTap: () => MyUtils.startPageUpAnim(context, BarragePage()),
+        ),
+        GestureDetector(
+          child: _item("随机渐变出现"),
+          onTap: () => MyUtils.startPageGradient(context, AppearsRandomlyPage()),
         ),
       ],
     );
