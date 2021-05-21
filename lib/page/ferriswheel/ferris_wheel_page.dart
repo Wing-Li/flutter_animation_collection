@@ -35,8 +35,8 @@ class _FerrisWheelPageState extends BaseState<FerrisWheelPage> {
       backgroundColor: Color(0xFFC58FFF),
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage(MyUtils.getImage("bg_anim", format: "webp")), fit: BoxFit.fill),
-        ),
+            // image: DecorationImage(image: AssetImage(MyUtils.getImage("bg_anim", format: "webp")), fit: BoxFit.fill),
+            ),
         child: Column(
           children: [
             Spacer(flex: 1),
@@ -77,22 +77,22 @@ class _FerrisWheelPageState extends BaseState<FerrisWheelPage> {
           ),
         ),
         Positioned(
-          top: ferrisWidth / 2 - 80 / 2,
+          top: (ferrisWidth - 70) / 2,
           left: 0,
           right: 0,
           child: Container(
             alignment: Alignment.topCenter,
             child: Container(
-              width: 80,
-              height: 80,
+              width: 70,
+              height: 70,
               decoration: BoxDecoration(
                 color: Color(0xFF333333),
                 borderRadius: BorderRadius.circular(68),
               ),
               alignment: Alignment.center,
               child: Text(
-                "Tap to\nchange",
-                style: TextStyle(color: Colors.white, fontSize: 12),
+                "❤\nLove",
+                style: TextStyle(color: Colors.white, fontSize: 14),
                 textAlign: TextAlign.center,
               ),
             ),
