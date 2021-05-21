@@ -5,6 +5,7 @@ import 'package:flutter_animation_collection/page/appears/appears_randomly_page.
 import 'package:flutter_animation_collection/utils/my_utils.dart';
 
 import 'page/barrage/barrage_page.dart';
+import 'page/ferriswheel/ferris_wheel_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -36,6 +37,8 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    MyUtils.screenWidth = MyUtils.getScreenWidth(context);
+
     return Scaffold(
       backgroundColor: Color(0xFFF3F4F6),
       appBar: _appBar(),
@@ -63,6 +66,10 @@ class _MyHomePageState extends State<MyHomePage> {
         GestureDetector(
           child: _item("随机渐变出现"),
           onTap: () => MyUtils.startPageGradient(context, AppearsRandomlyPage()),
+        ),
+        GestureDetector(
+          child: _item("摩天轮转盘"),
+          onTap: () => MyUtils.startPageGradient(context, FerrisWheelPage()),
         ),
       ],
     );

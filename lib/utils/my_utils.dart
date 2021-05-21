@@ -3,6 +3,8 @@ import 'package:flutter_animation_collection/page/view/my_page_fade_route_builde
 import 'package:flutter_animation_collection/page/view/my_page_slide_route_builder.dart';
 
 class MyUtils {
+  static double screenWidth = 375.0;
+
   static double getScreenWidth(BuildContext context) {
     return MediaQuery.of(context).size.width;
   }
