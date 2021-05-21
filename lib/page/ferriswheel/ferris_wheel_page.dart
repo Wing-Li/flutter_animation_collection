@@ -86,12 +86,12 @@ class _FerrisWheelPageState extends BaseState<FerrisWheelPage> {
               width: 80,
               height: 80,
               decoration: BoxDecoration(
-                color: Colors.black87,
+                color: Color(0xFF333333),
                 borderRadius: BorderRadius.circular(68),
               ),
               alignment: Alignment.center,
               child: Text(
-                "Tap to\nchange\n5left",
+                "Tap to\nchange",
                 style: TextStyle(color: Colors.white, fontSize: 12),
                 textAlign: TextAlign.center,
               ),
