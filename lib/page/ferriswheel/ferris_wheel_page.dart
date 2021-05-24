@@ -35,8 +35,8 @@ class _FerrisWheelPageState extends BaseState<FerrisWheelPage> {
       backgroundColor: Color(0xFFC58FFF),
       body: Container(
         decoration: BoxDecoration(
-            // image: DecorationImage(image: AssetImage(MyUtils.getImage("bg_anim", format: "webp")), fit: BoxFit.fill),
-            ),
+          image: DecorationImage(image: AssetImage(MyUtils.getImage("bg_anim", format: "webp")), fit: BoxFit.fill),
+        ),
         child: Column(
           children: [
             Spacer(flex: 1),
@@ -88,6 +88,7 @@ class _FerrisWheelPageState extends BaseState<FerrisWheelPage> {
               decoration: BoxDecoration(
                 color: Color(0xFF333333),
                 borderRadius: BorderRadius.circular(68),
+                border: Border.all(color: Color(0xFF252525), width: 4),
               ),
               alignment: Alignment.center,
               child: Text(
