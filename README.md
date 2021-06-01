@@ -23,3 +23,10 @@ Flutter 各类第三方的库还是少啊，还是因为我没找到呢。
 
 ![](https://github.com/Wing-Li/flutter_animation_collection/blob/master/res/appears_randomly.gif)
 
+
+### 摩天轮
+
+[ferris_wheel_page](https://github.com/Wing-Li/flutter_animation_collection/blob/master/lib/page/ferriswheel/ferris_wheel_page.dart)
+
+![](https://github.com/Wing-Li/flutter_animation_collection/blob/master/res/ferris_wheel.gif)
+
