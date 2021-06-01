@@ -19,20 +19,13 @@ class _BarragePageState extends BaseState<BarragePage> {
   final mBarrageWallController = BarrageWallController();
   Timer _barrageTimer;
 
-  double _closeButtonOpacity = 0.0;
-
   @override
   void initState() {
+    initCloseButton(true, 2000);
+
     super.initState();
 
     Future.delayed(Duration.zero, _fetchBarrageData);
-    Future.delayed(Duration(milliseconds: 2000), _setCloseButtonOpacity);
-  }
-
-  _setCloseButtonOpacity() {
-    setState(() {
-      _closeButtonOpacity = 0.7;
-    });
   }
 
   Future<Null> _fetchBarrageData({bool isShowLoading = false}) async {
@@ -130,9 +123,7 @@ class _BarragePageState extends BaseState<BarragePage> {
             Expanded(flex: 6, child: _barrageLayout()),
             Expanded(
               flex: 4,
-              child: Center(
-                child: _closeButton(),
-              ),
+              child: Center(child: MyCloseButton()),
             ),
           ],
         ),
@@ -151,22 +142,6 @@ class _BarragePageState extends BaseState<BarragePage> {
         bullets: [],
         child: new Container(),
         controller: mBarrageWallController,
-      ),
-    );
-  }
-
-  _closeButton() {
-    return FractionallySizedBox(
-      widthFactor: 0.6,
-      child: AnimatedOpacity(
-        opacity: _closeButtonOpacity,
-        duration: Duration(milliseconds: 1500),
-        child: RoundButton(
-          "关闭",
-          () => MyUtils.popPage(context),
-          backgroundColor: Color(0xFF8C66EB),
-          textColor: Colors.white,
-        ),
       ),
     );
   }

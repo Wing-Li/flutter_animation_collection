@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animation_collection/page/base_state.dart';
 import 'package:flutter_animation_collection/utils/my_utils.dart';
@@ -18,21 +19,13 @@ class _AppearsRandomlyPageState extends BaseState<AppearsRandomlyPage> {
 
   List<String> list = [];
 
-  double _closeButtonOpacity = 0.0;
-
   @override
   void initState() {
+    initCloseButton(true, 500);
+
     super.initState();
 
-    Future.delayed(Duration(milliseconds: 500), _setCloseButtonOpacity);
-
     list = List.generate(30, (index) => "img$index");
-  }
-
-  _setCloseButtonOpacity() {
-    setState(() {
-      _closeButtonOpacity = 0.7;
-    });
   }
 
   @override
@@ -55,9 +48,7 @@ class _AppearsRandomlyPageState extends BaseState<AppearsRandomlyPage> {
             ),
             Expanded(
               flex: 4,
-              child: Center(
-                child: _closeButton(),
-              ),
+              child: Center(child: MyCloseButton()),
             ),
           ],
         ),
@@ -120,22 +111,6 @@ class _AppearsRandomlyPageState extends BaseState<AppearsRandomlyPage> {
           ),
         ),
       ],
-    );
-  }
-
-  _closeButton() {
-    return FractionallySizedBox(
-      widthFactor: 0.6,
-      child: AnimatedOpacity(
-        opacity: _closeButtonOpacity,
-        duration: Duration(milliseconds: 1500),
-        child: RoundButton(
-          "关闭",
-          () => MyUtils.popPage(context),
-          backgroundColor: Color(0xFF8C66EB),
-          textColor: Colors.white,
-        ),
-      ),
     );
   }
 }

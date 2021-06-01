@@ -10,23 +10,15 @@ class FerrisWheelPage extends StatefulWidget {
 }
 
 class _FerrisWheelPageState extends BaseState<FerrisWheelPage> {
-  double _closeButtonOpacity = 0.0;
-
   List<String> list = [];
 
   @override
   void initState() {
+    initCloseButton(true, 500);
+
     super.initState();
 
-    Future.delayed(Duration(milliseconds: 500), _setCloseButtonOpacity);
-
     list = List.generate(30, (index) => "img$index");
-  }
-
-  _setCloseButtonOpacity() {
-    setState(() {
-      _closeButtonOpacity = 0.7;
-    });
   }
 
   @override
@@ -44,7 +36,7 @@ class _FerrisWheelPageState extends BaseState<FerrisWheelPage> {
             Expanded(
               flex: 4,
               child: Center(
-                child: _closeButton(),
+                child: MyCloseButton(),
               ),
             ),
           ],
@@ -118,22 +110,6 @@ class _FerrisWheelPageState extends BaseState<FerrisWheelPage> {
           child: ClipOval(
             child: Image.asset(MyUtils.getImage(list[index]), fit: BoxFit.cover),
           ),
-        ),
-      ),
-    );
-  }
-
-  _closeButton() {
-    return FractionallySizedBox(
-      widthFactor: 0.6,
-      child: AnimatedOpacity(
-        opacity: _closeButtonOpacity,
-        duration: Duration(milliseconds: 1500),
-        child: RoundButton(
-          "关闭",
-          () => MyUtils.popPage(context),
-          backgroundColor: Color(0xFF8C66EB),
-          textColor: Colors.white,
         ),
       ),
     );
