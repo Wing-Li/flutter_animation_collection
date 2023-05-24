@@ -30,3 +30,16 @@ Flutter 各类第三方的库还是少啊，还是因为我没找到呢。
 
 ![](https://github.com/Wing-Li/flutter_animation_collection/blob/master/res/ferris_wheel.gif)
 
+
+### 一个梦幻的旋转木马滑块小部件。仅用于显示在线和本地图像。
+
+项目地址：[fan\_carousel\_image\_slider](https://github.com/marjandn/fan_carousel_image_slider)
+
+![](https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/658f6a7cae2c438b8252e1599f285f4f~tplv-k3u1fbpfcp-watermark.image?)
+
+### 水果转换
+
+项目地址：[flutter-ui-challenge-fruit-swip](https://github.com/marjandn/flutter-ui-challenge-fruit-swip)
+
+![](https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6071aa769a894943a80ade69c4e08db7~tplv-k3u1fbpfcp-watermark.image?)
+
